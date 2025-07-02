@@ -1,11 +1,15 @@
 {% extends 'base.html' %}
+{% load static %}
     {% block title %}Home | Paul Ng'ang'a{% endblock %}
     {% block content %}
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Hello, I'm <span>Paul Ng'ang'a</span></h1>
-            <p>Computer Scientist & Django Developer</p>
-            <a href="{% url 'portfolio' %}" class="btn-primary">View My Work</a>
-        </div>
-    </section>
+<section class="hero">
+  <div class="hero-content">
+    <h1>Hello, I'm <span class="highlight">Paul Ng'ang'a</span></h1>
+    <p>Computer Scientist & Django Web Developer</p>
+    <a href="#portfolio" class="btn-primary">View My Work</a>
+  </div>
+  <div class="hero-image">
+    <img src="{% static 'images/paul-hero.jpg' %}" alt="Paul Ng'ang'a">
+  </div>
+</section>
     {% endblock %}
