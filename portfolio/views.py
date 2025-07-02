@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import Project
 
 # Create your views here.
 def home(request):
@@ -14,7 +15,12 @@ def contact(request):
 
 
 def portfolio(request):
-  return render(request, 'portfolio.html', {})
+  project = Project.objects.all()
+
+  context = {
+    "projects":project,
+  }
+  return render(request, 'portfolio.html', context)
 
 
 def service(request):

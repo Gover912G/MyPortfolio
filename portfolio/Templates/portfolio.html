@@ -5,6 +5,24 @@
         <h2>Selected Projects</h2>
         <div class="projects-grid">
             <!-- Repeat this card for each project -->
+            {% for project in projects %}
+            <div class="project-card">
+                {% if project.image %}
+                    <img src="{{ project.image.url }}" alt="{{ project.name }}" style="max-width:100%; border-radius: 8px;">
+                {% endif %}
+                <h3>{{ project.name }}</h3>
+                <p>{{ project.text }}</p>
+                {% if project.link %}
+                    <a href="{{ project.link }}" class="btn-primary" target="_blank">View Project</a>
+                {% endif %}
+            </div>
+            {% endfor %}
+
+            {% comment %} <div class="project-card">
+                <h3>Library Management System</h3>
+                <p>Full‑stack PHP/JS/XAMPP solution for efficient library workflows.</p>
+            </div>
+
             <div class="project-card">
                 <h3>Ticket Scanning System</h3>
                 <p>A robust mobile‑friendly ticket scanning web app for public transport systems.</p>
@@ -13,6 +31,24 @@
                 <h3>Library Management System</h3>
                 <p>Full‑stack PHP/JS/XAMPP solution for efficient library workflows.</p>
             </div>
+
+            <div class="project-card">
+                <h3>Ticket Scanning System</h3>
+                <p>A robust mobile‑friendly ticket scanning web app for public transport systems.</p>
+            </div>
+            <div class="project-card">
+                <h3>Library Management System</h3>
+                <p>Full‑stack PHP/JS/XAMPP solution for efficient library workflows.</p>
+            </div>
+
+            <div class="project-card">
+                <h3>Ticket Scanning System</h3>
+                <p>A robust mobile‑friendly ticket scanning web app for public transport systems.</p>
+            </div>
+            <div class="project-card">
+                <h3>Library Management System</h3>
+                <p>Full‑stack PHP/JS/XAMPP solution for efficient library workflows.</p>
+            </div> {% endcomment %}
             <!-- Add more projects as needed -->
         </div>
     </section>
