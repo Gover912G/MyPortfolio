@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+    {% block title %}Home | Paul Ng'ang'a{% endblock %}
+    {% block content %}
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Hello, I'm <span>Paul Ng'ang'a</span></h1>
+            <p>Computer Scientist & Django Developer</p>
+            <a href="{% url 'portfolio' %}" class="btn-primary">View My Work</a>
+        </div>
+    </section>
+    {% endblock %}
